@@ -1,0 +1,43 @@
+{
+  "name": "surveyjunior-quantum-v2",
+  "private": true,
+  "version": "2.0.0",
+  "main": "electron/main.js",
+  "description": "SurveyJunior Quantum V2 - Native Core",
+  "author": "SurveyJunior Team",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on tcp:5173 && electron .\"",
+    "electron:build": "vite build && electron-builder",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
+    "axios": "^1.13.2",
+    "electron-store": "^11.0.2",
+    "form-data": "^4.0.5",
+    "framer-motion": "^11.0.8",
+    "https-proxy-agent": "^7.0.6",
+    "lucide-react": "^0.344.0",
+    "proxy-chain": "^2.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.2",
+    "socks-proxy-agent": "^8.0.5",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "concurrently": "^8.2.2",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^4.0.0",
+    "vite": "^5.1.4",
+    "wait-on": "^7.2.0"
+  }
+}
